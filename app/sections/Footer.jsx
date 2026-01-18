@@ -3,6 +3,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa'
 
+import Image from 'next/image'
+import ptslogo from '../assets/ptslogo.png'
+
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
@@ -33,9 +36,13 @@ const Footer = () => {
                         viewport={{ once: true }}
                     >
                         <div className='flex items-center gap-2 mb-4'>
-                            <div className='w-10 h-10 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 flex items-center justify-center'>
-                                <span className='text-white font-bold text-xl'>P</span>
-                            </div>
+                            <Image
+                                src={ptslogo}
+                                alt="Petersen Logo"
+                                width={40}
+                                height={40}
+                                className="w-10 h-10 object-contain"
+                            />
                             <h3 className='text-2xl font-bold text-white'>Petersen</h3>
                         </div>
                         <p className='text-gray-400 leading-relaxed'>

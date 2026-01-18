@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
+import Image from "next/image";
+import ptslogo from "../assets/ptslogo.png";
 import OverlayMenu from "./OverlayMenu";
 
 const Navbar = () => {
@@ -46,9 +48,18 @@ const Navbar = () => {
                     animate={{ opacity: 1 }}
                     className="flex items-center space-x-2"
                 >
-                    <div className="text-2xl font-bold text-white hidden sm:block">
-                        Petersen
-                    </div>
+                    <a href="#home" className="flex items-center gap-2">
+                        <Image
+                            src={ptslogo}
+                            alt="Petersen Logo"
+                            width={40}
+                            height={40}
+                            className="w-10 h-10 object-contain"
+                        />
+                        <div className="text-2xl font-bold text-white hidden sm:block">
+                            Petersen
+                        </div>
+                    </a>
                 </motion.div>
 
                 {/* Desktop Menu */}

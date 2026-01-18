@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     description: "Computer Science Student | Full Stack Developer",
     type: "website",
   },
+  icons: {
+    icon: "/ptslogo.png",
+  },
 };
 
 export default function RootLayout({

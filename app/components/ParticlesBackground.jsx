@@ -7,72 +7,60 @@ const ParticlesBackground = () => {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
-        
+
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const particleCount = 150;
+        const particleCount = 50;
         let particles = [];
         let animationId;
 
         class Particle {
-            constructor(){
+            constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 2 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.3;
-                this.speedY = (Math.random() - 0.5) * 0.3;
-                this.opacity = Math.random() * 0.5 + 0.3;
+                this.radius = Math.random() * 3 + 1; 
+                this.speedX = (Math.random() - 0.5) * 0.5; 
+                this.speedY = Math.random() * 0.25 + 0.25; 
+                this.opacity = Math.random() * 0.6 + 0.2;
+                this.swing = Math.random() * 0.05; 
+                this.swingStep = Math.random() * 1000;
             }
-            
+
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(16, 185, 129, ${this.opacity})`;
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
                 ctx.fill();
             }
 
-            update(){
-                this.x += this.speedX;
+            update() {
+
+                this.swingStep += this.swing;
+                this.x += Math.cos(this.swingStep) * 0.5 + this.speedX;
                 this.y += this.speedY;
 
-                if(this.x < 0) this.x = canvas.width;
-                if(this.x > canvas.width) this.x = 0;
-                if(this.y < 0) this.y = canvas.height;
-                if(this.y > canvas.height) this.y = 0;
-                
+                if (this.y > canvas.height) {
+                    this.y = -10;
+                    this.x = Math.random() * canvas.width;
+                }
+
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+
                 this.draw();
             }
         }
 
-        function createParticles(){
+        function createParticles() {
             particles = [];
-            for(let i = 0; i < particleCount; i++){
+            for (let i = 0; i < particleCount; i++) {
                 particles.push(new Particle());
             }
         }
 
-        function connectParticles() {
-            for(let i = 0; i < particles.length; i++) {
-                for(let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if(distance < 120) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(16, 185, 129, ${0.15 * (1 - distance / 120)})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        function handleResize(){
+        function handleResize() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             createParticles();
@@ -81,7 +69,6 @@ const ParticlesBackground = () => {
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach((p) => p.update());
-            connectParticles();
             animationId = requestAnimationFrame(animate);
         }
 
@@ -96,8 +83,8 @@ const ParticlesBackground = () => {
     }, []);
 
     return (
-        <canvas 
-            ref={canvasRef} 
+        <canvas
+            ref={canvasRef}
             className='fixed top-0 left-0 w-full h-full -z-10'
         />
     );

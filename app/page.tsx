@@ -12,16 +12,19 @@ import CustomCursor from './components/CustomCursor'
 
 const Page = () => {
   return (
-    <div className='relative bg-black text-white min-h-screen'>
+    <div className='relative text-white min-h-screen'>
+      <div className='fixed inset-0 bg-black -z-20' />
       <CustomCursor />
       <ParticlesBackground />
       <Navbar />
-      <Home />
-      <About />
-      <Education />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main className='relative z-10'>
+        <Home />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )

@@ -64,9 +64,9 @@ const Skills = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className='text-4xl md:text-6xl font-bold text-white mb-4 text-center'>
-                        My <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Skills</span>
+                        My <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800'>Skills</span>
                     </h2>
-                    <div className='w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto mb-12'></div>
+                    <div className='w-20 h-1 bg-gradient-to-r from-red-700 to-red-800 mx-auto mb-12'></div>
 
                     <div className='grid md:grid-cols-2 gap-8'>
                         {skillCategories.map((category, categoryIndex) => (
@@ -76,7 +76,7 @@ const Skills = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                                 viewport={{ once: true }}
-                                className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-300'
+                                className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-red-700/20 hover:border-red-700/50 transition-all duration-300'
                             >
                                 <h3 className='text-2xl font-bold text-white mb-6'>{category.title}</h3>
                                 <div className='grid grid-cols-2 sm:grid-cols-3 gap-4'>

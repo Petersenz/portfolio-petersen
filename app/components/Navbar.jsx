@@ -41,7 +41,7 @@ const Navbar = () => {
                 initial={{ y: -100 }}
                 animate={{ y: visible ? 0 : -100 }}
                 transition={{ duration: 0.3 }}
-                className="fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-12 py-4 z-40 bg-black/50 backdrop-blur-lg border-b border-emerald-500/20"
+                className="fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-12 py-4 z-40 bg-black/50 backdrop-blur-lg border-b border-red-700/20"
             >
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <a
                             key={item.name}
                             href={item.href}
-                            className="text-white hover:text-emerald-400 transition-colors font-medium"
+                            className="text-white hover:text-red-700 transition-colors font-medium"
                         >
                             {item.name}
                         </a>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setMenuOpen(true)}
-                    className="md:hidden text-white text-2xl hover:text-emerald-400 transition-colors"
+                    className="md:hidden text-white text-2xl hover:text-red-700 transition-colors"
                 >
                     <FaBars />
                 </button>

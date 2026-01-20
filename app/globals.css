@@ -10,7 +10,8 @@ body {
   background-color: #000000;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "kanit", sans-serif;
 }
 
@@ -24,11 +25,10 @@ h1, h2 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #10b981, #3b82f6);
+  background: linear-gradient(to bottom, #d10000, #b10000);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #059669, #2563eb);
+  background: linear-gradient(to bottom, #b10000, #d10000);
 }
-

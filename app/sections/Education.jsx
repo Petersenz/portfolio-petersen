@@ -18,7 +18,7 @@ const Education = () => {
                 'Developed strong logical and analytical thinking skills'
             ],
             icon: <FaSchool />,
-            color: 'from-blue-500 to-purple-500'
+            color: 'from-red-800 to-red-500'
         },
         {
             type: 'University',
@@ -33,7 +33,7 @@ const Education = () => {
                 'Active participation in coding workshops and tech seminars'
             ],
             icon: <FaGraduationCap />,
-            color: 'from-emerald-400 to-blue-500'
+            color: 'from-red-800 to-red-500'
         }
     ];
 
@@ -47,13 +47,13 @@ const Education = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className='text-4xl md:text-6xl font-bold text-white mb-4 text-center'>
-                        Education <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Journey</span>
+                        Education <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800'>Journey</span>
                     </h2>
-                    <div className='w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto mb-16'></div>
+                    <div className='w-20 h-1 bg-gradient-to-r from-red-700 to-red-800 mx-auto mb-16'></div>
 
                     <div className='relative space-y-12'>
                         {/* Timeline Line */}
-                        <div className='absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500/20 via-blue-500/50 to-purple-500/20 hidden md:block'></div>
+                        <div className='absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-700/20 via-red-800/50 to-red-500/20 hidden md:block'></div>
 
                         {educationData.map((item, index) => (
                             <motion.div
@@ -65,26 +65,26 @@ const Education = () => {
                                 className={`relative flex flex-col md:flex-row items-center justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                             >
                                 {/* Timeline Dot */}
-                                <div className='absolute left-0 md:left-1/2 top-0 md:top-8 w-4 h-4 bg-emerald-400 rounded-full border-4 border-gray-900 z-10 transform -translate-x-1/2 hidden md:block'></div>
+                                <div className='absolute left-0 md:left-1/2 top-0 md:top-8 w-4 h-4 bg-red-700 rounded-full border-4 border-gray-900 z-10 transform -translate-x-1/2 hidden md:block'></div>
 
                                 <div className='w-full md:w-[45%]'>
                                     <motion.div
                                         whileHover={{ scale: 1.02 }}
-                                        className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-300'
+                                        className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-red-700/20 hover:border-red-700/50 transition-all duration-300'
                                     >
                                         <div className='flex items-center gap-4 mb-4'>
                                             <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center text-2xl text-white shadow-lg`}>
                                                 {item.icon}
                                             </div>
                                             <div>
-                                                <span className='text-emerald-400 text-sm font-medium uppercase tracking-wider'>{item.type}</span>
+                                                <span className='text-red-700 text-sm font-medium uppercase tracking-wider'>{item.type}</span>
                                                 <h3 className='text-xl md:text-2xl font-bold text-white'>{item.degree}</h3>
                                             </div>
                                         </div>
 
                                         <div className='space-y-4 text-gray-300'>
                                             <div className='flex items-center gap-2 font-medium text-white'>
-                                                <FaUniversity className='text-emerald-400' />
+                                                <FaUniversity className='text-red-700' />
                                                 <span>{item.school}</span>
                                             </div>
 
@@ -105,7 +105,7 @@ const Education = () => {
                                                 <ul className='space-y-2'>
                                                     {item.achievements.map((achievement, i) => (
                                                         <li key={i} className='flex items-start gap-2 text-sm'>
-                                                            <span className='text-emerald-400 mt-1'>•</span>
+                                                            <span className='text-red-700 mt-1'>•</span>
                                                             <span>{achievement}</span>
                                                         </li>
                                                     ))}

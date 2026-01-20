@@ -82,9 +82,9 @@ const Contact = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className='text-4xl md:text-6xl font-bold text-white mb-4 text-center'>
-                        Get In <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Touch</span>
+                        Get In <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800'>Touch</span>
                     </h2>
-                    <div className='w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto mb-12'></div>
+                    <div className='w-20 h-1 bg-gradient-to-r from-red-700 to-red-800 mx-auto mb-12'></div>
 
                     <div className='grid md:grid-cols-2 gap-12'>
                         {/* Contact Info */}
@@ -107,15 +107,15 @@ const Contact = () => {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                                         viewport={{ once: true }}
-                                        className='flex items-center gap-4 p-4 bg-white/5 backdrop-blur-lg rounded-xl border border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-300'
+                                        className='flex items-center gap-4 p-4 bg-white/5 backdrop-blur-lg rounded-xl border border-red-700/20 hover:border-red-700/50 transition-all duration-300'
                                     >
-                                        <div className='text-3xl text-emerald-400'>
+                                        <div className='text-3xl text-red-700'>
                                             {info.icon}
                                         </div>
                                         <div>
                                             <p className='text-gray-400 text-sm'>{info.title}</p>
                                             {info.link ? (
-                                                <a href={info.link} className='text-white hover:text-emerald-400 transition-colors'>
+                                                <a href={info.link} className='text-white hover:text-red-700 transition-colors'>
                                                     {info.value}
                                                 </a>
                                             ) : (
@@ -143,7 +143,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         placeholder='Your Name'
                                         required
-                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-emerald-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-all duration-300'
+                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-red-700/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-700 transition-all duration-300'
                                     />
                                 </div>
                                 <div>
@@ -154,7 +154,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         placeholder='Your Email'
                                         required
-                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-emerald-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-all duration-300'
+                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-red-700/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-700 transition-all duration-300'
                                     />
                                 </div>
                                 <div>
@@ -165,7 +165,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         placeholder='Subject'
                                         required
-                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-emerald-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-all duration-300'
+                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-red-700/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-700 transition-all duration-300'
                                     />
                                 </div>
                                 <div>
@@ -176,12 +176,12 @@ const Contact = () => {
                                         placeholder='Your Message'
                                         required
                                         rows='5'
-                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-emerald-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-all duration-300 resize-none'
+                                        className='w-full px-4 py-3 bg-white/5 backdrop-blur-lg border border-red-700/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-red-700 transition-all duration-300 resize-none'
                                     ></textarea>
                                 </div>
 
                                 {status.message && (
-                                    <div className={`p-4 rounded-xl ${status.type === 'success' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-red-500/20 text-red-400 border border-red-500/30'}`}>
+                                    <div className={`p-4 rounded-xl ${status.type === 'success' ? 'bg-red-700/20 text-red-700 border border-red-700/30' : 'bg-red-500/20 text-red-400 border border-red-500/30'}`}>
                                         {status.message}
                                     </div>
                                 )}
@@ -189,7 +189,7 @@ const Contact = () => {
                                 <button
                                     type='submit'
                                     disabled={loading}
-                                    className='w-full px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2'
+                                    className='w-full px-8 py-4 bg-gradient-to-r from-red-700 to-red-800 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-red-700/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2'
                                 >
                                     {loading ? 'Sending...' : (
                                         <>

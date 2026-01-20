@@ -19,7 +19,7 @@ const Home = () => {
                         transition={{ duration: 0.5 }}
                         className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6'
                     >
-                        Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Petersen</span>
+                        Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r bg-red-700 to-red-800'>Petersen</span>
                     </motion.h1>
 
                     <motion.p
@@ -50,7 +50,7 @@ const Home = () => {
                             href='https://github.com/Petersenz'
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='text-white hover:text-emerald-400 transition-colors text-3xl'
+                            className='text-white hover:text-red-700 transition-colors text-3xl'
                         >
                             <FaGithub />
                         </a>
@@ -58,13 +58,13 @@ const Home = () => {
                             href='https://www.instagram.com/wintrv.pxtr/'
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='text-white hover:text-emerald-400 transition-colors text-3xl'
+                            className='text-white hover:text-red-700 transition-colors text-3xl'
                         >
                             <FaInstagram />
                         </a>
                         <a
                             href='mailto:chotikorn.works@gmail.com'
-                            className='text-white hover:text-emerald-400 transition-colors text-3xl'
+                            className='text-white hover:text-red-700 transition-colors text-3xl'
                         >
                             <FaEnvelope />
                         </a>
@@ -78,13 +78,13 @@ const Home = () => {
                     >
                         <a
                             href='#projects'
-                            className='px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-105'
+                            className='px-8 py-4 bg-gradient-to-r from-red-700 to-red-800 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-red-700/50 transition-all duration-300 transform hover:scale-105'
                         >
                             View My Work
                         </a>
                         <a
                             href='#contact'
-                            className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-full hover:bg-emerald-400 hover:text-white transition-all duration-300 transform hover:scale-105'
+                            className='px-8 py-4 border-2 border-red-700 text-red-700 font-semibold rounded-full hover:bg-red-700 hover:text-white transition-all duration-300 transform hover:scale-105'
                         >
                             Contact Me
                         </a>

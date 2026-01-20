@@ -29,7 +29,7 @@ const OverlayMenu = ({ menuOpen, setMenuOpen }) => {
                 >
                     <button
                         onClick={() => setMenuOpen(false)}
-                        className='absolute top-8 right-8 text-white text-3xl hover:text-emerald-400 transition-colors'
+                        className='absolute top-8 right-8 text-white text-3xl hover:text-red-700 transition-colors'
                     >
                         <FaTimes />
                     </button>
@@ -42,7 +42,7 @@ const OverlayMenu = ({ menuOpen, setMenuOpen }) => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 onClick={() => handleClick(item.href)}
-                                className='text-4xl md:text-6xl font-bold text-white hover:text-emerald-400 transition-colors'
+                                className='text-4xl md:text-6xl font-bold text-white hover:text-red-700 transition-colors'
                             >
                                 {item.name}
                             </motion.button>

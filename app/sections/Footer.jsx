@@ -25,7 +25,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className='relative bg-black/80 backdrop-blur-lg border-t border-emerald-500/20 py-12 px-6 md:px-12'>
+        <footer className='relative bg-black/80 backdrop-blur-lg border-t border-red-700/20 py-12 px-6 md:px-12'>
             <div className='max-w-6xl mx-auto'>
                 <div className='grid md:grid-cols-3 gap-8 mb-8'>
                     {/* Brand Section */}
@@ -63,7 +63,7 @@ const Footer = () => {
                                 <li key={index}>
                                     <a
                                         href={link.href}
-                                        className='text-gray-400 hover:text-emerald-400 transition-colors inline-block'
+                                        className='text-gray-400 hover:text-red-700 transition-colors inline-block'
                                     >
                                         {link.name}
                                     </a>
@@ -88,7 +88,7 @@ const Footer = () => {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     aria-label={social.label}
-                                    className='w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-emerald-400 hover:to-blue-500 hover:scale-110 transition-all duration-300 border border-white/20'
+                                    className='w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-red-700 hover:to-red-800 hover:scale-110 transition-all duration-300 border border-white/20'
                                 >
                                     {social.icon}
                                 </a>
@@ -119,7 +119,7 @@ const Footer = () => {
             </div>
 
             {/* Decorative Elements */}
-            <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500'></div>
+            <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 via-red-800 to-red-500'></div>
         </footer>
     )
 }

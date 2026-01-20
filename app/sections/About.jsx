@@ -23,9 +23,9 @@ const About = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className='text-4xl md:text-6xl font-bold text-white mb-4 text-center'>
-                        About <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Me</span>
+                        About <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800'>Me</span>
                     </h2>
-                    <div className='w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto mb-12'></div>
+                    <div className='w-20 h-1 bg-gradient-to-r from-red-700 to-red-800 mx-auto mb-12'></div>
 
                     <div className='grid md:grid-cols-2 gap-12 items-center'>
                         {/* Left Side - Image */}
@@ -37,7 +37,7 @@ const About = () => {
                             className='flex justify-center'
                         >
                             <div className='relative'>
-                                <div className='w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 p-1'>
+                                <div className='w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-red-700 to-red-800 p-1'>
                                     <div className='w-full h-full rounded-full overflow-hidden bg-gray-900'>
                                         <Image
                                             src={profileImage2}
@@ -49,7 +49,7 @@ const About = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className='absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white text-4xl animate-bounce'>
+                                <div className='absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-red-700 to-red-800 rounded-full flex items-center justify-center text-white text-4xl animate-bounce'>
                                     <FaCode />
                                 </div>
                             </div>
@@ -87,9 +87,9 @@ const About = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                                         viewport={{ once: true }}
-                                        className='text-center p-4 bg-white/5 backdrop-blur-lg rounded-lg border border-emerald-500/20'
+                                        className='text-center p-4 bg-white/5 backdrop-blur-lg rounded-lg border border-red-700/20'
                                     >
-                                        <div className='text-3xl text-emerald-400 mb-2'>{stat.icon}</div>
+                                        <div className='text-3xl text-red-700 mb-2'>{stat.icon}</div>
                                         <div className='text-2xl font-bold mb-1'>{stat.value}</div>
                                         <div className='text-sm text-gray-400'>{stat.label}</div>
                                     </motion.div>

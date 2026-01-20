@@ -62,11 +62,11 @@ const Projects = () => {
                 >
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 text-center">
                         My{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800">
                             Projects
                         </span>
                     </h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto mb-12"></div>
+                    <div className="w-20 h-1 bg-gradient-to-r from-red-700 to-red-800 mx-auto mb-12"></div>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {projects.map((project, index) => (
@@ -77,10 +77,10 @@ const Projects = () => {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 viewport={{ once: true }}
                                 whileHover={{ y: -10 }}
-                                className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-300 group"
+                                className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-red-700/20 hover:border-red-700/50 transition-all duration-300 group"
                             >
                                 {/* Project Image/Icon */}
-                                <div className="h-64 md:h-80 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                                <div className="h-64 md:h-80 bg-gradient-to-br from-red-700/20 to-red-800/20 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
                                     <Image
                                         src={project.image}
                                         alt={project.title}
@@ -104,7 +104,7 @@ const Projects = () => {
                                         {project.tech.map((tech, techIndex) => (
                                             <span
                                                 key={techIndex}
-                                                className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm border border-emerald-500/30"
+                                                className="px-3 py-1 bg-red-700/20 text-red-700 rounded-full text-sm border border-red-700/30"
                                             >
                                                 {tech}
                                             </span>
@@ -125,7 +125,7 @@ const Projects = () => {
                                             href={project.demo}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 hover:shadow-lg hover:shadow-emerald-500/50 text-white rounded-lg transition-all duration-300"
+                                            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-700 to-red-800 hover:shadow-lg hover:shadow-red-700/50 text-white rounded-lg transition-all duration-300"
                                         >
                                             <FaExternalLinkAlt /> Demo
                                         </a>

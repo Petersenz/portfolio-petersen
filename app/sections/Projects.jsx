@@ -7,6 +7,7 @@ import glassNavImage from "../assets/projects/glass-nav.png";
 import gpuShopImage from "../assets/projects/petersen-gpushop.png";
 import csConnectImage from "../assets/projects/cs-connect.png";
 import ptGameHubImage from "../assets/projects/pt-gh.png";
+import recruitReadyImage from "../assets/projects/recruitready.png";
 
 const Projects = () => {
     const projects = [
@@ -18,6 +19,15 @@ const Projects = () => {
             github: "https://github.com/Petersenz/PCRU-CS-Connect",
             demo: "https://pcru-cs-connect.vercel.app/",
             image: csConnectImage,
+        },
+        {
+            title: "RecruitReady (AI Resume Analyzer)",
+            description:
+                "Developed a premium resume audit platform using Next.js 16.1.4 and Llama 3.1 AI to provide real-time grading and professional feedback.",
+            tech: ["Next.js", "React", "TypeScript", "Supabase", "Tailwind CSS", "Llama 3.1 AI"],
+            github: "https://github.com/Petersenz/recruit-ready",
+            demo: "https://recruit-ready.vercel.app/",
+            image: recruitReadyImage,
         },
         {
             title: "PTGameHub",
@@ -36,16 +46,7 @@ const Projects = () => {
             github: "https://github.com/Petersenz/GlassNav---UI-Components",
             demo: "https://glass-nav-ui-components.vercel.app/",
             image: glassNavImage,
-        },
-        {
-            title: "Petersen GPUShop",
-            description:
-                "An e-commerce UI prototype featuring product catalogs and payment walkthroughs. Built with HTML, CSS, and Tailwind to demonstrate responsive design and intuitive user interfaces.",
-            tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
-            github: "https://github.com/Petersenz/Petersen-s-GPUShop",
-            demo: "https://petersengpushop.vercel.app/index.html",
-            image: gpuShopImage,
-        },
+        }
     ];
 
     return (

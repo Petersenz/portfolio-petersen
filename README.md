@@ -2,8 +2,6 @@
 
 A modern, high-performance, and visually stunning portfolio website built with **Next.js 16**, **Tailwind CSS**, and **Framer Motion**. Featuring a sleek dark-themed design with Glassmorphism effects, interactive animations, and a smooth user experience.
 
-![Petersen Portfolio] (https://github.com/Petersenz/portfolio/raw/main/public/screenshot.png) _(Note: Add your own screenshot later)_
-
 ## 🚀 Features
 
 - **Responsive Design**: Optimized for all devices—mobile, tablet, and desktop.

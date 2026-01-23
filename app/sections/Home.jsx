@@ -19,7 +19,7 @@ const Home = () => {
                         transition={{ duration: 0.5 }}
                         className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6'
                     >
-                        Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r bg-red-700 to-red-800'>Petersen</span>
+                        Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800'>Petersen</span>
                     </motion.h1>
 
                     <motion.p
@@ -50,6 +50,7 @@ const Home = () => {
                             href='https://github.com/Petersenz'
                             target='_blank'
                             rel='noopener noreferrer'
+                            title='GitHub'
                             className='text-white hover:text-red-700 transition-colors text-3xl'
                         >
                             <FaGithub />
@@ -58,12 +59,14 @@ const Home = () => {
                             href='https://www.instagram.com/wintrv.pxtr/'
                             target='_blank'
                             rel='noopener noreferrer'
+                            title='Instagram'
                             className='text-white hover:text-red-700 transition-colors text-3xl'
                         >
                             <FaInstagram />
                         </a>
                         <a
                             href='mailto:chotikorn.works@gmail.com'
+                            title='Email Me'
                             className='text-white hover:text-red-700 transition-colors text-3xl'
                         >
                             <FaEnvelope />

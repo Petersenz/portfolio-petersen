@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGraduationCap, FaCode, FaLightbulb } from 'react-icons/fa'
+import { FaGraduationCap, FaCode, FaLightbulb, FaExternalLinkAlt } from 'react-icons/fa'
 import Image from 'next/image'
 import profileImage from '../assets/profile.png'
 import profileImage2 from '../assets/profile2.png'
@@ -75,6 +75,7 @@ const About = () => {
                                 My primary focus is full-stack development, where I specialize in building
                                 robust and scalable web applications. My journey also encompasses experience
                                 in IoT and Android development, along with a strong interest in networking
+                                Along with a strong interest in networking
                                 and database management systems (DBMS).
                             </p>
 
@@ -95,6 +96,24 @@ const About = () => {
                                     </motion.div>
                                 ))}
                             </div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                viewport={{ once: true }}
+                                className='mt-8 flex flex-wrap gap-4'
+                            >
+                                <a
+                                    href='/resume.pdf'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-700 to-red-800 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-red-700/30 transition-all duration-300 transform hover:-translate-y-1'
+                                >
+                                    <span>Preview Resume</span>
+                                    <FaExternalLinkAlt className='text-sm' />
+                                </a>
+                            </motion.div>
                         </motion.div>
                     </div>
                 </motion.div>
